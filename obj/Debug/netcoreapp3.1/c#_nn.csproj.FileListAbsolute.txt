@@ -1,0 +1,15 @@
+C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.csprojAssemblyReference.cache
+C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.AssemblyInfoInputs.cache
+C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.AssemblyInfo.cs
+C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.csproj.CoreCompileInputs.cache
+C:\Users\GuestUser\Desktop\c#_nn\bin\Debug\netcoreapp3.1\c#_nn.exe
+C:\Users\GuestUser\Desktop\c#_nn\bin\Debug\netcoreapp3.1\c#_nn.deps.json
+C:\Users\GuestUser\Desktop\c#_nn\bin\Debug\netcoreapp3.1\c#_nn.runtimeconfig.json
+C:\Users\GuestUser\Desktop\c#_nn\bin\Debug\netcoreapp3.1\c#_nn.runtimeconfig.dev.json
+C:\Users\GuestUser\Desktop\c#_nn\bin\Debug\netcoreapp3.1\c#_nn.dll
+C:\Users\GuestUser\Desktop\c#_nn\bin\Debug\netcoreapp3.1\c#_nn.pdb
+C:\Users\GuestUser\Desktop\c#_nn\bin\Debug\netcoreapp3.1\NumSharp.Core.dll
+C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.csproj.CopyComplete
+C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.dll
+C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.pdb
+C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.genruntimeconfig.cache

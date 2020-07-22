@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "We3CJdoCFAwbaMobskdYuvpY4lMsMQ1Rw5Yj6NYvGYc8141C6Se6qj0Nz1GF5IuGqRo4YSmHZ6HuSfbTSSERKA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\GuestUser\\Desktop\\c#_nn\\c#_nn.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\GuestUser\\.nuget\\packages\\numsharp\\0.20.5\\numsharp.0.20.5.nupkg.sha512",
+    "C:\\Users\\GuestUser\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\GuestUser\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}
