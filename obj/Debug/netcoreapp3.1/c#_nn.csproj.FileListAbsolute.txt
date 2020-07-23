@@ -13,3 +13,8 @@ C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.csproj.CopyComple
 C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.dll
 C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.pdb
 C:\Users\GuestUser\Desktop\c#_nn\obj\Debug\netcoreapp3.1\c#_nn.genruntimeconfig.cache
+C:\Users\GuestUser\Desktop\C#_NN\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\GuestUser\Desktop\C#_NN\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\GuestUser\Desktop\C#_NN\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\GuestUser\Desktop\C#_NN\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\GuestUser\Desktop\C#_NN\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

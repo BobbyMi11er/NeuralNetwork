@@ -8,10 +8,31 @@
     ".NETCoreApp,Version=v3.1": {
       "c#_nn/1.0.0": {
         "dependencies": {
-          "NumSharp": "0.20.5"
+          "NumSharp": "0.20.5",
+          "System.Drawing.Common": "5.0.0-preview.7.20364.11"
         },
         "runtime": {
           "c#_nn.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/5.0.0-preview.7.20364.11": {},
+      "Microsoft.Win32.SystemEvents/5.0.0-preview.7.20364.11": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0-preview.7.20364.11"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.36411"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.36411"
+          }
         }
       },
       "NumSharp/0.20.5": {
@@ -26,6 +47,32 @@
           }
         }
       },
+      "System.Drawing.Common/5.0.0-preview.7.20364.11": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0-preview.7.20364.11",
+          "Microsoft.Win32.SystemEvents": "5.0.0-preview.7.20364.11"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.1",
+            "fileVersion": "4.6.26919.2"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.36411"
+          },
+          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.36411"
+          }
+        }
+      },
       "System.Memory/4.5.3": {},
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {}
     }
@@ -36,12 +83,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.NETCore.Platforms/5.0.0-preview.7.20364.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wK8YPtEFe3AM5XauQ7Gjnpdqb+k6zoEYrmJ25dg8vUzmblkxTc5SS/yLUFlrGeBrOXvcnv3MtSBSWsPDnUN+gg==",
+      "path": "microsoft.netcore.platforms/5.0.0-preview.7.20364.11",
+      "hashPath": "microsoft.netcore.platforms.5.0.0-preview.7.20364.11.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/5.0.0-preview.7.20364.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N8UoHngEaDa3VSYTgXz9oTdlwzQrPaFEoKWuNE4g1dp8xCEMzyGy8Z/EIMTqVzZzB0xtgMLSYUBkxmKogO6UCQ==",
+      "path": "microsoft.win32.systemevents/5.0.0-preview.7.20364.11",
+      "hashPath": "microsoft.win32.systemevents.5.0.0-preview.7.20364.11.nupkg.sha512"
+    },
     "NumSharp/0.20.5": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-4ovXO3cVFqiZSoLLFaYji1nxibLJdrZlZI74LCQWC4TpPZbwUOn6vn1hT8ueO+V7/AS5CNUXcwa76E+2AG+rKQ==",
       "path": "numsharp/0.20.5",
       "hashPath": "numsharp.0.20.5.nupkg.sha512"
+    },
+    "System.Drawing.Common/5.0.0-preview.7.20364.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ARe8WzFiE7MGqkPPl4Hnx75eOB/U84HhH/tWIXyBoX6y8dJrjCikuPx6mFu58ygTxcNcutH1I9LHDVv2X3UEKQ==",
+      "path": "system.drawing.common/5.0.0-preview.7.20364.11",
+      "hashPath": "system.drawing.common.5.0.0-preview.7.20364.11.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",

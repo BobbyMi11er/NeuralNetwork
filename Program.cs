@@ -6,13 +6,15 @@ namespace c__nn
     {        
         static void Main(string[] args)
         {
-            Neural_Network NN = new Neural_Network(2, 2, 3, 1);
+            mnist_data_processor processor = new mnist_data_processor("testing_set.txt");
+            processor.format();
+            // Neural_Network NN = new Neural_Network(2, 2, 3, 1);
 
-            double[,] training_inputs = new double[,] {{1,0}, {0,1}, {1,1}, {0,0}};
-            double[] training_targets = new double[4] {1, 1, 0, 0};
+            // double[,] training_inputs = new double[,] {{1,0}, {0,1}, {1,1}, {0,0}};
+            // double[] training_targets = new double[4] {1, 1, 0, 0};
 
-            train(50000, NN, training_inputs, training_targets);
-            test(NN, training_inputs, training_targets);
+            // train(50000, NN, training_inputs, training_targets);
+            // test(NN, training_inputs, training_targets);
         }
 
         public static void train(int num_times, Neural_Network network, double[,] training_inputs, double [] training_targets) {
