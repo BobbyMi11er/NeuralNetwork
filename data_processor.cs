@@ -8,8 +8,8 @@ namespace c__nn
     {
         static String FILEPATH = "C:\\Users\\GuestUser\\Downloads\\";
         // static String InputLine = "";
-        public static List<List<double>> inputs {get; private set;}
-        public List<int> answers {get; private set;}
+        public List<List<double>> inputs {get; private set;}
+        public List<double> answers {get; private set;}
 
         public mnist_data_processor(String path) {
             if (path.Substring(0,2).Equals("C:")) {
@@ -23,18 +23,19 @@ namespace c__nn
 
         public void format() {
             inputs = new List<List<double>>();
-            answers = new List<int>();
+            answers = new List<double>();
             string [] lines = System.IO.File.ReadAllLines(FILEPATH);
 
             int k = 0;
             foreach(string line in lines) {
                 if (k > 3)
                     break;
-                String [] inArray = line.Split(",");
+                String [] inArray = line.Split(" ");
                 inputs.Add(new List<double>());
 
                 // answers is first number in line
                 answers.Add(int.Parse(inArray[0]));
+                
                 for (int i = 1; i < inArray.Length; i ++) {
                     // if (int.Parse(inArray[i]) > 50)
                     //     inputs[k].Add(1);

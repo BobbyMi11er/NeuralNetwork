@@ -34,7 +34,7 @@ namespace c__nn {
             function = new Sigmoid();
         }
 
-        public double predict(double[,] input_array) {
+        public double[] predict(double[,] input_array) {
             Matrix inputs = Matrix.fromArray(input_array);
             Matrix[] outputs = new Matrix[num_layers];
             for (int i = 0; i < num_layers; i ++) {
@@ -45,8 +45,12 @@ namespace c__nn {
                 outputs[i].add(biases[i]);
                 outputs[i].map(function);
             }
-            // only works if output is one
-            return outputs[num_layers - 1].Data[0,0];
+
+            double [] output_array = new double[output_nodes];
+            for (int i = 0; i < output_nodes; i ++) {
+                output_array[i] = outputs[num_layers - 1].Data[0,i];
+            }
+            return output_array;
         }
 
         public void train(double[,] input_array, double[] target_array) {
