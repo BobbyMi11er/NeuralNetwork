@@ -79,8 +79,9 @@ namespace c__nn
     class MathOperation : Function {
         Matrix B;
         String Str;
-        bool isScalar = false;
+        bool isScalar = false, isArr = false;
         double Scalar;
+        double[] Arr;
         public MathOperation(Matrix b, string str) {
             B = b;
             Str = str;
@@ -90,11 +91,19 @@ namespace c__nn
             isScalar = true;
             Scalar = scalar;
         }
+        public MathOperation(double[] arr, string str) {
+            Str = str;
+            isArr = true;
+            Arr = arr;
+        }
 
          public override double func(double x, int i, int j) {
             double value = 0;
             if (isScalar)
                 value = Scalar;
+            else if (isArr) {
+                value = Arr[i];
+            }
             else {
                 value = B.Data[i,j];
             }

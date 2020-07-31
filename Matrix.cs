@@ -81,6 +81,20 @@ namespace c__nn {
             m.Data = Function.map(a.Data, sub);
             return m;
         }
+        public static double[] subtract(double[] a, double[] b) {
+            double[,] A = new double[1, a.Length];
+            for (int i = 0; i < a.Length; i ++) {
+                A[0,i] = a[i];
+            }
+            MathOperation sub = new MathOperation(b, "-");
+            double[,] m = new double[1, a.Length];
+            m = Function.map(A, sub);
+            double [] M = new double[a.Length];
+            for (int i = 0; i < m.Length; i ++) {
+                M[i] = m[0,i];
+            }
+            return M;
+        }
         public void subtract(Matrix b) {
             if (this.Rows != b.Rows || this.Cols != b.Cols) {
                 Console.WriteLine("Subtract(): Columns and rows of this array must match columns and rows of inputted array");
@@ -100,6 +114,21 @@ namespace c__nn {
                 MathOperation add = new MathOperation(b, "+");
                 this.Data = Function.map(this.Data, add);
             }
+        }
+
+        public static double[] add(double[] a, double[] b) {
+             double[,] A = new double[1, a.Length];
+            for (int i = 0; i < a.Length; i ++) {
+                A[0,i] = a[i];
+            }
+            MathOperation sub = new MathOperation(b, "+");
+            double[,] m = new double[1, a.Length];
+            m = Function.map(A, sub);
+            double [] M = new double[a.Length];
+            for (int i = 0; i < m.Length; i ++) {
+                M[i] = m[0,i];
+            }
+            return M;
         }
         public void add(double x) {
             // Scalar Addition

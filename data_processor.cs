@@ -28,20 +28,31 @@ namespace c__nn
 
             int k = 0;
             foreach(string line in lines) {
-                if (k > 3)
-                    break;
-                String [] inArray = line.Split(" ");
+                // gets rid of extra space at end of each line
+                String newLine = line.Substring(0, line.Length - 1);
+
+                String [] inArray = newLine.Split(" ");
+
                 inputs.Add(new List<double>());
 
                 // answers is first number in line
-                answers.Add(int.Parse(inArray[0]));
+                answers.Add(Double.Parse(inArray[0]));
                 
                 for (int i = 1; i < inArray.Length; i ++) {
                     // if (int.Parse(inArray[i]) > 50)
                     //     inputs[k].Add(1);
                     // else
                     //     inputs[k].Add(0);
-                    inputs[k].Add((int.Parse(inArray[i])/255.0));
+                    try {
+                        inputs[k].Add(Double.Parse(inArray[i]));
+                    }
+                    catch (FormatException) {
+                        Console.WriteLine(inArray[i].GetType());
+                        Console.WriteLine("i: " + i + " k: " + k);
+                        Console.WriteLine(inArray[i] + "end");
+                        inputs[k].Add(Double.Parse(inArray[i]));
+                        break;
+                    }
                 }
                 k ++;
             } 
