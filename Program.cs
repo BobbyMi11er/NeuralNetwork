@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace c__nn
 {
     class Program
@@ -8,10 +8,12 @@ namespace c__nn
         {
             Neural_Network NN = new Neural_Network(2, 2, 3, 1);
 
-            double[,] training_inputs = new double[,] {{1,0}, {0,1}, {1,1}, {0,0}};
-            double[] training_targets = new double[4] {1, 1, 0, 0};
+            mnist_data_processor processor = new mnist_data_processor("xor_problem.txt");
+            processor.format();
+            double[,] training_inputs = ListToDouble(processor.inputs);
+            double[] training_targets = ListToDouble(processor.answers);
 
-            train(50000, NN, training_inputs, training_targets);
+            train(35000, NN, training_inputs, training_targets);
             test(NN, training_inputs, training_targets);
         }
 
@@ -34,23 +36,47 @@ namespace c__nn
 
         public static void test(Neural_Network network, double[,] training_inputs, double [] training_targets) {
             double[,] X = new double[network.input_nodes, 1];
-            int error_counter = 0;
-            double error_treshold = 0.40;
+            double[] Y = new double[network.output_nodes];
 
             for (int i = 0; i < training_inputs.GetLength(0); i ++) {
                 for (int j = 0; j < training_inputs.GetLength(1); j ++) {
                     X[j,0] = training_inputs[i,j];
                 }
-                double guess = network.predict(X)[0];
-                double error = training_targets[i] - guess;
-                if (error > error_treshold || error < (-1 * error_treshold))
-                    error_counter ++;
-                Console.WriteLine("Output: " + guess + "  Expected: " + training_targets[i] + "  Error: " + error);
+                Y[0] = training_targets[i];
+                double[] guess = network.predict(X);
+                double[] error = Matrix.subtract(Y, guess);
+                
+                Console.WriteLine("Output: " + arrToString(guess) + "  Expected: " + training_targets[i] + "  Error: " + arrToString(error));
+            }  
+        }
+
+        public static String arrToString(double[] arr) {
+            String str = "[";
+            for (int i = 0; i <arr.Length-1; i ++) {
+                str += arr[i] + ",";
             }
-            if (error_counter >= 2) {
-                Console.Write("Excess error detected. Retraining for better results");
-                train(50000, network, training_inputs, training_targets);
-            }   
+            str += arr[arr.Length-1] + "]";
+            return str;
+        }
+
+        public static double[,] ListToDouble(List<List<double>> list) {
+            double[,] arr = new double[list.Count, list[0].Count];
+
+            for (int i = 0; i <list.Count; i ++) {
+                for (int j = 0; j < list[0].Count; j ++) {
+                    arr[i,j] = list[i][j];
+                }
+            }
+            return arr;
+        }
+
+        public static double[] ListToDouble(List<double> list) {
+            double[] arr = new double[list.Count];
+
+            for (int i = 0; i < list.Count; i ++) {
+                arr[i] = list[i];
+            }
+            return arr;
         }
     }
 }
