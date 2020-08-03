@@ -48,7 +48,8 @@ namespace c__nn {
 
             double [] output_array = new double[output_nodes];
             for (int i = 0; i < output_nodes; i ++) {
-                output_array[i] = outputs[num_layers - 1].Data[0,i];
+                // outputs[num_layers-1].print();
+                output_array[i] = outputs[num_layers - 1].Data[i,0];
             }
             return output_array;
         }
@@ -67,15 +68,20 @@ namespace c__nn {
             }
 
             Matrix targets = Matrix.fromArray(target_array);
+            if (targets.Cols != 1) {
+                // make sure dimensions are right
+                targets = Matrix.transpose(targets);
+            }
 
             Matrix[] errors = new Matrix[num_layers];
             Matrix[] gradients = new Matrix[num_layers];
             Matrix[] deltas = new Matrix[num_layers];
 
-            for (int i = num_layers - 1;i >= 0; i --) {
+            for (int i = num_layers - 1; i >= 0; i --) {
                 // FIND ERRORS
-                if (i == num_layers -1)
+                if (i == num_layers -1) {
                     errors[i] = Matrix.subtract(targets, outputs[i]);
+                }
                 else {
                     Matrix who_T = Matrix.transpose(weights[i + 1]);
                     errors[i] = Matrix.dot(who_T, errors[i + 1]);

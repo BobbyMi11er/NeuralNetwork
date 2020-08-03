@@ -6,12 +6,13 @@ namespace c__nn
 {
     class mnist_data_processor
     {
-        static String FILEPATH = "C:\\Users\\GuestUser\\Downloads\\";
+        static String FILEPATH;
         // static String InputLine = "";
         public List<List<double>> inputs {get; private set;}
         public List<double> answers {get; private set;}
 
         public mnist_data_processor(String path) {
+            FILEPATH = "C:\\Users\\GuestUser\\Downloads\\";
             if (path.Substring(0,2).Equals("C:")) {
                 // allow people to put in full path if wanted
                 FILEPATH = path;
@@ -44,7 +45,8 @@ namespace c__nn
                     // else
                     //     inputs[k].Add(0);
                     try {
-                        inputs[k].Add(Double.Parse(inArray[i]));
+                        // normalize data
+                        inputs[k].Add(Double.Parse(inArray[i])/255.0);
                     }
                     catch (FormatException) {
                         Console.WriteLine(inArray[i].GetType());
