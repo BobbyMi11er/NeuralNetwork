@@ -12,7 +12,7 @@ namespace c__nn
         public List<double> answers {get; private set;}
 
         public mnist_data_processor(String path) {
-            FILEPATH = "C:\\Users\\GuestUser\\Downloads\\";
+            FILEPATH = "C:\\Users\\bobby\\Downloads\\";
             if (path.Substring(0,2).Equals("C:")) {
                 // allow people to put in full path if wanted
                 FILEPATH = path;

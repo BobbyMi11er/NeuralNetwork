@@ -1,31 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GuestUser\\Desktop\\C#_NN\\c#_nn.csproj": {}
+    "C:\\Users\\bobby\\NeuralNetwork\\c#_nn.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GuestUser\\Desktop\\C#_NN\\c#_nn.csproj": {
+    "C:\\Users\\bobby\\NeuralNetwork\\c#_nn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GuestUser\\Desktop\\C#_NN\\c#_nn.csproj",
+        "projectUniqueName": "C:\\Users\\bobby\\NeuralNetwork\\c#_nn.csproj",
         "projectName": "c#_nn",
-        "projectPath": "C:\\Users\\GuestUser\\Desktop\\C#_NN\\c#_nn.csproj",
-        "packagesPath": "C:\\Users\\GuestUser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GuestUser\\Desktop\\C#_NN\\obj\\",
+        "projectPath": "C:\\Users\\bobby\\NeuralNetwork\\c#_nn.csproj",
+        "packagesPath": "C:\\Users\\bobby\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bobby\\NeuralNetwork\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GuestUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\bobby\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netcoreapp6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net6.0": {
+            "targetAlias": "netcoreapp6.0",
             "projectReferences": {}
           }
         },
@@ -36,7 +35,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net6.0": {
+          "targetAlias": "netcoreapp6.0",
           "dependencies": {
             "NumSharp": {
               "target": "Package",
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -82,18 +82,15 @@ namespace c__nn {
             return m;
         }
         public static double[] subtract(double[] a, double[] b) {
-            double[,] A = new double[1, a.Length];
+            if(a.Length != b.Length) {
+                Console.WriteLine("subtract(double arrays): Both arrays must be of the same length");
+            }
+            double [] output = new double[a.Length];
+
             for (int i = 0; i < a.Length; i ++) {
-                A[0,i] = a[i];
+                output[i] = b[i] - a[i];
             }
-            MathOperation sub = new MathOperation(b, "-");
-            double[,] m = new double[1, a.Length];
-            m = Function.map(A, sub);
-            double [] M = new double[a.Length];
-            for (int i = 0; i < m.Length; i ++) {
-                M[i] = m[0,i];
-            }
-            return M;
+            return output;
         }
         public void subtract(Matrix b) {
             if (this.Rows != b.Rows || this.Cols != b.Cols) {
